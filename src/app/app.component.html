@@ -8,8 +8,8 @@
       <ul class="list-group">
         <div *ngIf="onlyOdd">
           <li class="list-group-item"
-            *ngFor="let odd of oddNumbers">
-            {{ odd }}
+            *ngFor="let number of oddNumbers">
+            {{ number }}
           </li>
         </div>
         <div *ngIf="!onlyOdd">
@@ -19,6 +19,9 @@
           </li>
         </div>
       </ul>
+      <div appBasicHighlight>
+        This div is styled with our basic-highlight directive
+      </div>
     </div>
   </div>
 </div>

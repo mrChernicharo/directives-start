@@ -43,6 +43,12 @@
       <div appBetterHighlight>
         This div is styled with our better-highlight directive
       </div>
+      <div [ngSwitch]="value">
+        <div *ngSwitchCase="5">5</div>
+        <div *ngSwitchCase="10">10</div>
+        <div *ngSwitchCase="15">15</div>
+        <div *ngSwitchDefault>20</div>
+      </div>
     </div>
   </div>
 </div>

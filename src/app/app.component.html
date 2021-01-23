@@ -2,12 +2,15 @@
   <div class="row">
     <div class="col-xs-12">
       <button
+        appAppAnimation
         class="btn btn-primary"
-        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
-      <br><br>
+        (click)="onlyOdd = !onlyOdd"
+      >
+        Only show odd numbers
+      </button>
+      <br /><br />
 
       <ul class="list-group">
-
         <!-- <div *ngIf="onlyOdd">
           <li class="list-group-item"
             *ngFor="let number of oddNumbers">
@@ -16,8 +19,7 @@
         </div> -->
 
         <div *unless="!onlyOdd">
-          <li class="list-group-item"
-            *ngFor="let number of oddNumbers">
+          <li class="list-group-item" *ngFor="let number of oddNumbers">
             {{ number }}
           </li>
         </div>
@@ -30,12 +32,10 @@
         </div> -->
 
         <ng-template [ngIf]="!onlyOdd">
-          <li class="list-group-item"
-            *ngFor="let number of evenNumbers">
+          <li class="list-group-item" *ngFor="let number of evenNumbers">
             {{ number }}
           </li>
         </ng-template>
-
       </ul>
       <div appBasicHighlight>
         This div is styled with our basic-highlight directive
@@ -50,5 +50,23 @@
         <div *ngSwitchDefault>20</div>
       </div>
     </div>
+
+    <button appBasicHighlight>basic</button>
+    <button appBetterHighlight>better</button>
+    <button appAppAnimation>animation</button>
+
+    <div class="canvas">
+      <div appAppAnimation class="sq"></div>
+      <div class="sq" appAppAnimation></div>
+      <div class="sq" appAppAnimation></div>
+      <div class="sq"></div>
+    </div>
+  </div>
+  <div class="canvas2">
+    <div
+      *ngFor="let i of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]"
+      class="circle"
+      appParticles
+    ></div>
   </div>
 </div>
